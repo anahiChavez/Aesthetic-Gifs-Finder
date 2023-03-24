@@ -15,7 +15,7 @@ def home():
         # api_key= YOUR API KEY
         # limit= Number of gifs you want
         # q= word of search
-        url = "https://api.giphy.com/v1/gifs/search?api_key=XHNvPi3vXM5WwbB2w5zWVvOGq6VsD3cK&limit=40&q=" + word 
+        url = "https://api.giphy.com/v1/gifs/search?api_key=YOUR_API_KEY_HERE&limit=40&q=" + word 
         giphy = requests.get(url)   # Request
         dataGiphy = giphy.json()    # Json info obtained by API
         return render_template('index.html', data = dataGiphy['data']) # data - Parameter with the json data info to the HTML for loop
